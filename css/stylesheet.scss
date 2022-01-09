@@ -1,0 +1,390 @@
+@charset "UTF-8";
+/* CSS GLOBAL Document */
+
+// Sass Variables
+$lochmara: rgb(5, 115, 186);
+$malibu: rgb(88, 207, 246);
+$mineShaft: rgb(52, 52, 52);
+$jungleMist: rgb(189, 209, 218);
+
+@font-face {
+   font-family: "LibreBaskerville";
+   src: url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.eot");
+   src: url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.eot?#iefix") format("embedded-opentype"),
+      url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.otf") format("opentype"),
+      url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.svg") format("svg"),
+      url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.ttf") format("truetype"),
+      url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.woff") format("woff"),
+      url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.woff2") format("woff2");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Roboto";
+   src: url("../webfonts/Roboto-Regular/Roboto-Regular.eot");
+   src: url("../webfonts/Roboto-Regular/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+      url("../webfonts/Roboto-Regular/Roboto-Regular.otf") format("opentype"),
+      url("../webfonts/Roboto-Regular/Roboto-Regular.svg") format("svg"),
+      url("../webfonts/Roboto-Regular/Roboto-Regular.ttf") format("truetype"),
+      url("../webfonts/Roboto-Regular/Roboto-Regular.woff") format("woff"),
+      url("../webfonts/Roboto-Regular/Roboto-Regular.woff2") format("woff2");
+   font-weight: normal;
+   font-style: normal;
+}
+
+/*GLOBAL */
+* {
+   box-sizing: border-box;
+   outline: none;
+}
+
+html {
+   /* Position */
+   /* Display */
+   margin: 0 auto;
+   /* Text */
+   font-size: 62.5%;
+   /* Decoration */
+}
+
+body {
+   margin: 0;
+   line-height: 2rem;
+
+   font-family: "Roboto", serif;
+   font-size: 1.5rem;
+
+   color: $mineShaft;
+}
+
+a {
+   text-decoration: none;
+}
+
+h1, h2, h3 {
+   font-weight: normal;
+   text-align: center;
+}
+
+/* HEADER */
+header {
+   font-family: "LibreBaskerville", serif;
+
+   background-image: url(../img/divers/ciel-bleu.jpeg);
+   background-size: cover;
+   background-position: center;
+
+   /* NAV */
+   nav {
+      display: flex;
+      padding: 2.5rem;
+
+      background-color: rgba(255,255,255,0.3);
+
+      .logo {
+         flex-grow: 1;
+
+         a {
+            img {
+               height: 6.5rem;
+            }
+
+            .logoTitle {
+               margin: 0 0.5rem 0 1rem;
+               line-height: 3.5rem;
+
+               font-size: 1.5rem;
+               font-weight: 600;
+            }
+         }
+      }
+
+      .navMenu {
+         display: flex;
+
+         font-size: 1rem;
+
+         .search {
+            width: 22rem;
+            margin: auto;
+
+            font-family: "Roboto", serif;
+
+            form {
+               label {
+                  display: none;
+               }
+
+               input {
+                  height: 2.5rem;
+                  width: 18rem;
+
+                  font-size: 1.33rem;
+
+                  border-radius: 2px 0 0 2px;
+                  border: 1px solid $malibu;
+               }
+
+               button {
+                  height: 2.5rem;
+                  margin-left: -0.42rem;
+
+                  font-size: 1.33rem;
+
+                  color: #EEEEEE;
+                  background-color: $malibu;
+                  border-radius: 0 2px 2px 0;
+                  border: 1px solid $malibu;
+                  cursor: pointer;
+               }
+            }
+         }
+
+         div {
+            margin: auto;
+
+            ul {
+               padding: 0;
+
+               text-transform: uppercase;
+
+               li {
+                  display: inline-block;
+
+                  list-style: none;
+
+                  a {
+                     font-family: "LibreBaskerville", serif;
+                     text-shadow: 2px 2px 10px rgba(0,0,0,1);
+
+                     color: rgb(255, 255, 255);
+                     transition-duration: 0.15s;
+                  }
+               }
+            }
+
+            ul li:hover a {
+               text-shadow: initial;
+
+               color: $lochmara;
+            }
+         }
+      }
+
+      a {
+         display: inline-block;
+         margin: 0 1rem;
+         vertical-align: middle;
+
+         font-family: "Roboto", serif;
+         font-size: 1.5em;
+         text-align: center;
+
+         color: $mineShaft;
+      }
+
+      a .fa {
+         display: block;
+      }
+   }
+}
+
+.announcement {
+   padding: 0.5rem;
+   margin: 0;
+
+   font-size: 1.6rem;
+   text-align: center;
+   text-shadow: 2px 2px 10px rgba(0,0,0,1);
+
+   color: rgb(255, 255, 255);
+   background-color: rgba(255,255,255,0.15);
+}
+
+.announcement strong {
+   font-weight: normal; 
+}
+
+.presentation {
+   padding: 5rem 0 30rem;
+
+   font-size: 2.6rem;
+   text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+
+   color: rgb(255, 255, 255);
+}
+
+/* MAIN */
+/* INDEX.HTML PAGE */
+.containerHomepage {
+   margin-top: -1.8rem;
+
+   // Slider
+   .slider {
+      display: flex;
+      
+      height: 50rem;
+
+      background-image: url(../img/programme/RequinRoll-4.jpeg);
+      background-position: center;
+      background-size: cover;
+
+
+      .titreSlider {
+         width: 36rem;
+         margin: auto;
+         padding: 5rem 0;
+         line-height: 3rem;
+         overflow: hidden;
+         z-index: 1;
+
+         font-size: 100%;
+         font-weight: 1000;
+         text-transform: uppercase;
+         text-align: center;
+
+         background-color: rgba(255, 255, 255, 0.9);
+         opacity: 1;
+         transition: all ease-in-out 0.5s;
+         -webkit-transition: all ease-in-out 0.5s;
+
+         h1 {
+            margin-top: 1rem;
+         }
+
+         hr {
+            height: 1px;
+            max-width: 5rem;
+            margin: 1.4rem auto;
+
+            background-color: $jungleMist;
+            border: none;
+         }
+
+         .button {
+            display: block;
+            height: 2.5rem;
+            width: 14rem;
+            margin: 1.5rem auto;
+            padding-bottom: 2.9rem;
+
+            font-size: 1.1rem;
+            text-transform: uppercase;
+
+            color: #ffffff;
+            background-color: $jungleMist;
+            border-radius: 3px;
+            transition-duration: 0.2s;
+         }
+
+         .button:hover {
+            background-color: $malibu;
+            cursor: pointer;
+         }
+      }
+   }
+
+   .slider:hover {
+      .titreSlider {
+         opacity: 0;
+      }
+
+      .titreSlider:hover {
+         opacity: 1;
+      }
+   }
+
+   .news {
+      h1 {
+         text-transform: uppercase;
+      }
+
+      .displayMovies {
+         display: flex;
+         justify-content: space-around;
+
+         div {
+            text-align: center;
+
+            img {
+               max-height: 50rem;
+            }
+
+            img + span {
+               font-size: 1.8rem;
+               font-weight: 600;
+            }
+
+            span {
+               display: block;
+               margin: 1rem 0;
+            }
+         }
+      }
+   }
+
+   .newsletter {
+      margin: 3rem auto 0;
+
+      div {
+         margin-bottom: 4rem;
+
+         font-family: "Roboto", serif;
+
+         form {
+            text-align: center;
+
+            label {
+               display: none;
+            }
+
+            input {
+               height: 3.5rem;
+               width: 22rem;
+
+               font-size: 1.33rem;
+
+               border-radius: 2px 0 0 2px;
+               border: 1px solid $malibu;
+            }
+
+            button {
+               height: 3.5rem;
+               margin-left: -0.42rem;
+
+               font-size: 1.33rem;
+
+               color: #EEEEEE;
+               background-color: $malibu;
+               border-radius: 0 2px 2px 0;
+               border: 1px solid $malibu;
+               cursor: pointer;
+            }
+         }
+      }
+   }
+
+   aside iframe {
+      width: 100%;
+   }
+}
+
+/* FOOTER */
+.licence {
+   display: flex;
+   justify-content: space-around;
+   margin-top: -0.5rem;
+
+   color: rgb(255, 255, 255);
+   background-image: url(../img/divers/ciel-bleu-01.jpeg);
+
+   img {
+      height: 6.5rem;
+      margin: 2.3rem 0 1.5rem;
+   }
+
+   div:first-child + div, div:first-child + div + div {
+      margin: auto 0;
+   }
+}

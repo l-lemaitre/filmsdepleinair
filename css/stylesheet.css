@@ -1,0 +1,235 @@
+/* CSS GLOBAL Document */
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.eot");
+  src: url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.otf") format("opentype"), url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.svg") format("svg"), url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.ttf") format("truetype"), url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.woff") format("woff"), url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto";
+  src: url("../webfonts/Roboto-Regular/Roboto-Regular.eot");
+  src: url("../webfonts/Roboto-Regular/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/Roboto-Regular/Roboto-Regular.otf") format("opentype"), url("../webfonts/Roboto-Regular/Roboto-Regular.svg") format("svg"), url("../webfonts/Roboto-Regular/Roboto-Regular.ttf") format("truetype"), url("../webfonts/Roboto-Regular/Roboto-Regular.woff") format("woff"), url("../webfonts/Roboto-Regular/Roboto-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+/*GLOBAL */
+* {
+  box-sizing: border-box;
+  outline: none; }
+
+html {
+  /* Position */
+  /* Display */
+  margin: 0 auto;
+  /* Text */
+  font-size: 62.5%;
+  /* Decoration */ }
+
+body {
+  margin: 0;
+  line-height: 2rem;
+  font-family: "Roboto", serif;
+  font-size: 1.5rem;
+  color: #343434; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  text-align: center; }
+
+/* HEADER */
+header {
+  font-family: "LibreBaskerville", serif;
+  background-image: url(../img/divers/ciel-bleu.jpeg);
+  background-size: cover;
+  background-position: center;
+  /* NAV */ }
+  header nav {
+    display: flex;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.3); }
+    header nav .logo {
+      flex-grow: 1; }
+      header nav .logo a img {
+        height: 6.5rem; }
+      header nav .logo a .logoTitle {
+        margin: 0 0.5rem 0 1rem;
+        line-height: 3.5rem;
+        font-size: 1.5rem;
+        font-weight: 600; }
+    header nav .navMenu {
+      display: flex;
+      font-size: 1rem; }
+      header nav .navMenu .search {
+        width: 22rem;
+        margin: auto;
+        font-family: "Roboto", serif; }
+        header nav .navMenu .search form label {
+          display: none; }
+        header nav .navMenu .search form input {
+          height: 2.5rem;
+          width: 18rem;
+          font-size: 1.33rem;
+          border-radius: 2px 0 0 2px;
+          border: 1px solid #58cff6; }
+        header nav .navMenu .search form button {
+          height: 2.5rem;
+          margin-left: -0.42rem;
+          font-size: 1.33rem;
+          color: #EEEEEE;
+          background-color: #58cff6;
+          border-radius: 0 2px 2px 0;
+          border: 1px solid #58cff6;
+          cursor: pointer; }
+      header nav .navMenu div {
+        margin: auto; }
+        header nav .navMenu div ul {
+          padding: 0;
+          text-transform: uppercase; }
+          header nav .navMenu div ul li {
+            display: inline-block;
+            list-style: none; }
+            header nav .navMenu div ul li a {
+              font-family: "LibreBaskerville", serif;
+              text-shadow: 2px 2px 10px black;
+              color: white;
+              transition-duration: 0.15s; }
+        header nav .navMenu div ul li:hover a {
+          text-shadow: initial;
+          color: #0573ba; }
+    header nav a {
+      display: inline-block;
+      margin: 0 1rem;
+      vertical-align: middle;
+      font-family: "Roboto", serif;
+      font-size: 1.5em;
+      text-align: center;
+      color: #343434; }
+    header nav a .fa {
+      display: block; }
+
+.announcement {
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: center;
+  text-shadow: 2px 2px 10px black;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15); }
+
+.announcement strong {
+  font-weight: normal; }
+
+.presentation {
+  padding: 5rem 0 30rem;
+  font-size: 2.6rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white; }
+
+/* MAIN */
+/* INDEX.HTML PAGE */
+.containerHomepage {
+  margin-top: -1.8rem; }
+  .containerHomepage .slider {
+    display: flex;
+    height: 50rem;
+    background-image: url(../img/programme/RequinRoll-4.jpeg);
+    background-position: center;
+    background-size: cover; }
+    .containerHomepage .slider .titreSlider {
+      width: 36rem;
+      margin: auto;
+      padding: 5rem 0;
+      line-height: 3rem;
+      overflow: hidden;
+      z-index: 1;
+      font-size: 100%;
+      font-weight: 1000;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      opacity: 1;
+      transition: all ease-in-out 0.5s;
+      -webkit-transition: all ease-in-out 0.5s; }
+      .containerHomepage .slider .titreSlider h1 {
+        margin-top: 1rem; }
+      .containerHomepage .slider .titreSlider hr {
+        height: 1px;
+        max-width: 5rem;
+        margin: 1.4rem auto;
+        background-color: #bdd1da;
+        border: none; }
+      .containerHomepage .slider .titreSlider .button {
+        display: block;
+        height: 2.5rem;
+        width: 14rem;
+        margin: 1.5rem auto;
+        padding-bottom: 2.9rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: #bdd1da;
+        border-radius: 3px;
+        transition-duration: 0.2s; }
+      .containerHomepage .slider .titreSlider .button:hover {
+        background-color: #58cff6;
+        cursor: pointer; }
+  .containerHomepage .slider:hover .titreSlider {
+    opacity: 0; }
+  .containerHomepage .slider:hover .titreSlider:hover {
+    opacity: 1; }
+  .containerHomepage .news h1 {
+    text-transform: uppercase; }
+  .containerHomepage .news .displayMovies {
+    display: flex;
+    justify-content: space-around; }
+    .containerHomepage .news .displayMovies div {
+      text-align: center; }
+      .containerHomepage .news .displayMovies div img {
+        max-height: 50rem; }
+      .containerHomepage .news .displayMovies div img + span {
+        font-size: 1.8rem;
+        font-weight: 600; }
+      .containerHomepage .news .displayMovies div span {
+        display: block;
+        margin: 1rem 0; }
+  .containerHomepage .newsletter {
+    margin: 3rem auto 0; }
+    .containerHomepage .newsletter div {
+      margin-bottom: 4rem;
+      font-family: "Roboto", serif; }
+      .containerHomepage .newsletter div form {
+        text-align: center; }
+        .containerHomepage .newsletter div form label {
+          display: none; }
+        .containerHomepage .newsletter div form input {
+          height: 3.5rem;
+          width: 22rem;
+          font-size: 1.33rem;
+          border-radius: 2px 0 0 2px;
+          border: 1px solid #58cff6; }
+        .containerHomepage .newsletter div form button {
+          height: 3.5rem;
+          margin-left: -0.42rem;
+          font-size: 1.33rem;
+          color: #EEEEEE;
+          background-color: #58cff6;
+          border-radius: 0 2px 2px 0;
+          border: 1px solid #58cff6;
+          cursor: pointer; }
+  .containerHomepage aside iframe {
+    width: 100%; }
+
+/* FOOTER */
+.licence {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -0.5rem;
+  color: white;
+  background-image: url(../img/divers/ciel-bleu-01.jpeg); }
+  .licence img {
+    height: 6.5rem;
+    margin: 2.3rem 0 1.5rem; }
+  .licence div:first-child + div, .licence div:first-child + div + div {
+    margin: auto 0; }

@@ -7,6 +7,9 @@ $malibu: rgb(88, 207, 246);
 $mineShaft: rgb(52, 52, 52);
 $jungleMist: rgb(189, 209, 218);
 
+$libreBaskerville: "LibreBaskerville";
+$roboto: "Roboto";
+
 @font-face {
    font-family: "LibreBaskerville";
    src: url("../webfonts/LibreBaskerville-Regular/LibreBaskerville-Regular.eot");
@@ -52,7 +55,7 @@ body {
    margin: 0;
    line-height: 2rem;
 
-   font-family: "Roboto", serif;
+   font-family: $roboto, serif;
    font-size: 1.5rem;
 
    color: $mineShaft;
@@ -71,7 +74,7 @@ h1, h2, h3 {
 header {
    max-height: 52rem;
 
-   font-family: "LibreBaskerville", serif;
+   font-family: $libreBaskerville, serif;
    text-align: center;
 
    background-image: url(../img/divers/ciel-bleu.jpeg);
@@ -114,7 +117,7 @@ header {
             width: 22rem;
             margin: auto;
 
-            font-family: "Roboto", serif;
+            font-family: $roboto, serif;
 
             form {
                label {
@@ -161,7 +164,7 @@ header {
                   list-style: none;
 
                   a {
-                     font-family: "LibreBaskerville", serif;
+                     font-family: $libreBaskerville, serif;
                      text-shadow: 2px 2px 10px rgba(0,0,0,1);
 
                      color: rgb(255, 255, 255);
@@ -183,7 +186,7 @@ header {
          margin: 0 1rem;
          vertical-align: middle;
 
-         font-family: "Roboto", serif;
+         font-family: $roboto, serif;
          font-size: 1.5em;
          text-align: center;
 
@@ -212,7 +215,7 @@ header {
    }
 
    .presentation {
-      padding: 5rem 0 30rem;
+      padding: 2.5rem 0 30rem;
 
       font-size: 1.9rem;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
@@ -340,7 +343,7 @@ header {
       div {
          margin-bottom: 4rem;
 
-         font-family: "Roboto", serif;
+         font-family: $roboto, serif;
 
          form {
             text-align: center;
@@ -375,7 +378,7 @@ header {
       }
    }
 
-   aside iframe {
+   section iframe {
       width: 100%;
    }
 }
@@ -419,31 +422,14 @@ header {
 }
 
 @media screen and (min-width: 992px) {
-   
-}
-
-@media screen and (min-width: 1280px) {
    /* HEADER */
-   header {
-      max-height: initial;
-
-      text-align: initial;
-
-      /* NAV */
+   header { 
       nav {
-         flex-direction: initial;
-
-         .navMenu {
-            flex-direction: initial;
-         }
-      }
-
-      .announcement {
-         font-size: 1.6rem;
+         line-height: 5rem;
       }
 
       .presentation {
-         font-size: 2.6rem;
+         padding-top: 5rem;
       }
    }
 
@@ -452,7 +438,7 @@ header {
    .containerHomepage {
       // Slider
       .slider {
-         height: 50rem;
+         height: 40rem;
 
          .titreSlider {
             width: 36rem;
@@ -462,18 +448,12 @@ header {
          }
       }
 
-      .news {
-         .displayMovies {
-            flex-direction: initial;
-            justify-content: space-around;
+      .news .displayMovies {
+         flex-direction: initial;
+         justify-content: space-around;
 
-            div img {
-               max-height: 50rem;
-            }
-
-            div:first-child + div, div:first-child + div + div {
-               margin-top: initial;
-            }
+         div:first-child + div, div:first-child + div + div {
+            margin-top: initial;
          }
       }
    }
@@ -496,6 +476,48 @@ header {
 
          div:first-child + div + div {
             padding-bottom: initial;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1280px) {
+   /* HEADER */
+   header {
+      max-height: initial;
+
+      text-align: initial;
+
+      /* NAV */
+      nav {
+         flex-direction: initial;
+         line-height: 2rem;
+
+         .navMenu {
+            flex-direction: initial;
+         }
+      }
+
+      .announcement {
+         font-size: 1.6rem;
+      }
+
+      .presentation {
+         font-size: 2.6rem;
+      }
+   }
+
+   /* MAIN */
+   /* INDEX.HTML PAGE */
+   .containerHomepage {
+      // Slider
+      .slider {
+         height: 50rem;
+      }
+
+      .news .displayMovies {
+         div img {
+            max-height: 50rem;
          }
       }
    }

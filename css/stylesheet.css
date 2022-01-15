@@ -124,7 +124,7 @@ header {
   header .announcement strong {
     font-weight: normal; }
   header .presentation {
-    padding: 5rem 0 30rem;
+    padding: 2.5rem 0 30rem;
     font-size: 1.9rem;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     color: white; }
@@ -222,7 +222,7 @@ header {
           border-radius: 0 2px 2px 0;
           border: 1px solid #58cff6;
           cursor: pointer; }
-  .containerHomepage aside iframe {
+  .containerHomepage section iframe {
     width: 100%; }
 
 /* FOOTER */
@@ -247,25 +247,17 @@ header {
     .licence div div:first-child + div + div {
       padding-bottom: 1rem; }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 992px) {
   /* HEADER */
-  header {
-    max-height: initial;
-    text-align: initial;
-    /* NAV */ }
-    header nav {
-      flex-direction: initial; }
-      header nav .navMenu {
-        flex-direction: initial; }
-    header .announcement {
-      font-size: 1.6rem; }
-    header .presentation {
-      font-size: 2.6rem; }
+  header nav {
+    line-height: 5rem; }
+  header .presentation {
+    padding-top: 5rem; }
 
   /* MAIN */
   /* INDEX.HTML PAGE */
   .containerHomepage .slider {
-    height: 50rem; }
+    height: 40rem; }
     .containerHomepage .slider .titreSlider {
       width: 36rem;
       padding: 5rem 0;
@@ -273,8 +265,6 @@ header {
   .containerHomepage .news .displayMovies {
     flex-direction: initial;
     justify-content: space-around; }
-    .containerHomepage .news .displayMovies div img {
-      max-height: 50rem; }
     .containerHomepage .news .displayMovies div:first-child + div, .containerHomepage .news .displayMovies div:first-child + div + div {
       margin-top: initial; }
 
@@ -291,5 +281,27 @@ header {
         margin: 2.2rem 0 2rem; }
       .licence div div:first-child + div + div {
         padding-bottom: initial; } }
+@media screen and (min-width: 1280px) {
+  /* HEADER */
+  header {
+    max-height: initial;
+    text-align: initial;
+    /* NAV */ }
+    header nav {
+      flex-direction: initial;
+      line-height: 2rem; }
+      header nav .navMenu {
+        flex-direction: initial; }
+    header .announcement {
+      font-size: 1.6rem; }
+    header .presentation {
+      font-size: 2.6rem; }
+
+  /* MAIN */
+  /* INDEX.HTML PAGE */
+  .containerHomepage .slider {
+    height: 50rem; }
+  .containerHomepage .news .displayMovies div img {
+    max-height: 50rem; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

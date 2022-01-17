@@ -6,6 +6,7 @@ $lochmara: rgb(5, 115, 186);
 $malibu: rgb(88, 207, 246);
 $mineShaft: rgb(52, 52, 52);
 $jungleMist: rgb(189, 209, 218);
+$white: rgb(255, 255, 255);
 
 $libreBaskerville: "LibreBaskerville";
 $roboto: "Roboto";
@@ -101,8 +102,12 @@ header {
                margin: 0 0.5rem 0 1rem;
                line-height: 3.5rem;
 
+               font-family: $libreBaskerville, serif;
                font-size: 1.5rem;
-               font-weight: 600;
+               font-weight: 1000;
+               font-style: italic;
+
+               color: $lochmara;
             }
          }
       }
@@ -110,6 +115,7 @@ header {
       .navMenu {
          display: flex;
          flex-direction: column;
+         line-height: 5rem;
 
          font-size: 1rem;
 
@@ -120,10 +126,6 @@ header {
             font-family: $roboto, serif;
 
             form {
-               label {
-                  display: none;
-               }
-
                input {
                   height: 2.5rem;
                   width: 18rem;
@@ -153,6 +155,7 @@ header {
             margin: auto;
 
             ul {
+               margin-top: auto;
                padding: 0;
                line-height: 2.7rem;
 
@@ -167,7 +170,7 @@ header {
                      font-family: $libreBaskerville, serif;
                      text-shadow: 2px 2px 10px rgba(0,0,0,1);
 
-                     color: rgb(255, 255, 255);
+                     color: $white;
                      transition-duration: 0.15s;
                   }
                }
@@ -206,7 +209,7 @@ header {
       text-align: center;
       text-shadow: 2px 2px 10px rgba(0,0,0,1);
 
-      color: rgb(255, 255, 255);
+      color: $white;
       background-color: rgba(255,255,255,0.15);
    }
 
@@ -220,13 +223,13 @@ header {
       font-size: 1.9rem;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 
-      color: rgb(255, 255, 255);
+      color: $white;
    }
 }
 
 /* MAIN */
 /* INDEX.HTML PAGE */
-.containerHomepage {
+.homepageContainer {
    margin-top: -1.8rem;
 
    // Slider
@@ -305,6 +308,8 @@ header {
    }
 
    .news {
+      margin-top: 4rem;
+
       h1 {
          text-transform: uppercase;
       }
@@ -316,12 +321,13 @@ header {
          div {
             text-align: center;
 
-            img {
+            a img {
                max-height: 33rem;
             }
 
-            img + span {
-               font-size: 1.8rem;
+            h3 {
+               margin-top: 1rem;
+
                font-weight: 600;
             }
 
@@ -347,10 +353,6 @@ header {
 
          form {
             text-align: center;
-
-            label {
-               display: none;
-            }
 
             input {
                height: 3.5rem;
@@ -386,11 +388,11 @@ header {
 /* FOOTER */
 .licence {
    margin-top: -0.5rem;
-   line-height: 3rem;
+   line-height: 2rem;
 
    text-align: center;
 
-   color: rgb(255, 255, 255);
+   color: $white;
    background-image: url(../img/divers/ciel-bleu-01.jpeg);
 
    div {
@@ -404,8 +406,8 @@ header {
          background-color: rgba(255, 255, 255, 0);
 
          img {
-            width: 12rem;
-            margin: 2.2rem auto 1rem;
+            height: 6.5rem;
+            margin: 2.1rem auto 2rem;
          }
       }
 
@@ -415,19 +417,180 @@ header {
          background-color: rgba(255, 255, 255, 0);
       }
 
-      div:first-child + div + div {
-         padding-bottom: 1rem;
+      div:first-child + div {
+         white-space: pre-line;
+
+         p {
+            margin-top: 0;
+         }
+      }
+
+      div:first-child + div + div p {
+         margin-top: 0;
+
+         a {
+            text-decoration: underline;
+
+            color: $white;
+         }
+      }
+   }
+}
+
+/* REGISTRATION.HTML PAGE */
+.bookingContainer {
+   form {
+      table {
+         width: 90%;
+         margin: 0 auto 2.5rem;
+
+         border-collapse: collapse;
+
+         caption {
+            margin: 2.5rem 0;
+            line-height: 3rem;
+
+            color: $lochmara;
+            font-size: 3rem;
+         }
+
+         thead {
+            tr:first-child th {
+               padding: 1rem 2.5rem;
+
+               font-size: 2.2rem;
+               font-weight: normal;
+               text-align: left;
+
+               color: white;
+               background-color: $malibu;
+               border: 1px solid $malibu;
+            }
+
+            tr {
+               th:first-child {
+                  text-align: left;
+               }
+
+               th {
+                  padding: 1rem;
+
+                  border: 1px solid $jungleMist;
+               }
+            }
+         }
+
+         tbody {
+            tr:nth-child(even) {
+               background-color: #f2f2f2;
+            }
+
+            tr:nth-child(odd) {
+               background-color: #FAFAFA;
+            }
+
+            tr {
+               td:first-child {
+                  text-align: left;
+               }
+
+               td {
+                  width: 33%;
+                  padding: 1rem;
+
+                  text-align: center;
+
+                  border: 1px solid $jungleMist;
+
+                  a {
+                     color: $mineShaft;
+                  }
+               }
+            }
+         }
+      }
+
+      /* SECTION INFO */
+      .info {
+         text-align: center;
+
+         h2 {
+            padding: 1rem 0;
+            line-height: 2.5rem;
+
+            color: $lochmara;
+         }
+
+         fieldset {
+            width: 90%;
+            margin: 2.5rem auto;
+            padding: 2.5rem 0;
+
+            border: 1px solid #dedede;
+
+            legend {
+               margin: 0 auto;
+
+               font-size: 1.5em;
+            }
+
+            ul {
+               padding-left: 0;
+
+               li {
+                  display: inline-block;
+
+                  input[type=text] {
+                     width: 50%;
+                     padding: 0.5rem;
+
+                     background-color: $white;
+                     border: 0;
+                     border-bottom: 1px solid #dedede;
+                  }
+               }
+            }
+
+            select {
+               width: 95%;
+               margin: 2.5%;
+               padding: 1rem;
+
+               font-family: sans-serif;
+
+               option {
+                  font-family: sans-serif;
+               }
+            }
+         }
+
+         h2 + fieldset, h2 + fieldset + fieldset {
+            ul li {
+               display: block;
+            }
+         }
+
+         button {
+            margin-bottom: 3rem;
+            padding: 1rem 2.5rem;
+
+            color: $white;
+            background-color: $jungleMist;
+            border: 0;
+            transition-duration: 0.2s;
+         }
+
+         button:hover {
+            background-color: $malibu;
+            cursor: pointer;
+         }
       }
    }
 }
 
 @media screen and (min-width: 992px) {
    /* HEADER */
-   header { 
-      nav {
-         line-height: 5rem;
-      }
-
+   header {
       .presentation {
          padding-top: 5rem;
       }
@@ -435,7 +598,7 @@ header {
 
    /* MAIN */
    /* INDEX.HTML PAGE */
-   .containerHomepage {
+   .homepageContainer {
       // Slider
       .slider {
          height: 40rem;
@@ -459,23 +622,45 @@ header {
    }
 
    /* FOOTER */
-   .licence {
-      line-height: initial;
+   .licence div div:first-child + div {
+      line-height: 2.5rem;
+   }
 
-      text-align: initial;
-
-      div {
-         flex-direction: initial;
-         justify-content: space-around;
-
-         div img {
-            height: 6.5rem;
-            width: initial;
-            margin: 2.2rem 0 2rem;
+   /* REGISTRATION.HTML PAGE */
+   .bookingContainer {
+      form {
+         table {
+            caption {
+               line-height: 2rem;
+            }
          }
 
-         div:first-child + div + div {
-            padding-bottom: initial;
+         /* SECTION INFO */
+         .info {
+            h2 {
+               padding: 2rem 0;
+               line-height: 2rem;
+            }
+
+            fieldset {
+               ul {
+                  padding-left: initial;
+
+                  li {
+                     display: inline-block;
+
+                     label {
+                        margin-left: 2.5rem;
+                     }
+                  }
+               }
+            }
+
+            h2 + fieldset + fieldset {
+               ul li {
+                  display: inline-block;
+               }
+            }
          }
       }
    }
@@ -491,10 +676,13 @@ header {
       /* NAV */
       nav {
          flex-direction: initial;
-         line-height: 2rem;
 
          .navMenu {
             flex-direction: initial;
+
+            div ul {
+               margin: auto;
+            }
          }
       }
 
@@ -509,15 +697,29 @@ header {
 
    /* MAIN */
    /* INDEX.HTML PAGE */
-   .containerHomepage {
+   .homepageContainer {
       // Slider
       .slider {
          height: 50rem;
       }
 
       .news .displayMovies {
-         div img {
+         div a img {
             max-height: 50rem;
+         }
+      }
+   }
+
+   /* REGISTRATION.HTML PAGE */
+   .bookingContainer {
+      form {
+         /* SECTION INFO */
+         .info {
+            h2 + fieldset {
+               ul li {
+                  display: inline-block;
+               }
+            }
          }
       }
    }

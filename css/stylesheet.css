@@ -59,18 +59,20 @@ header {
       header nav .logo a .logoTitle {
         margin: 0 0.5rem 0 1rem;
         line-height: 3.5rem;
+        font-family: "LibreBaskerville", serif;
         font-size: 1.5rem;
-        font-weight: 600; }
+        font-weight: 1000;
+        font-style: italic;
+        color: #0573ba; }
     header nav .navMenu {
       display: flex;
       flex-direction: column;
+      line-height: 5rem;
       font-size: 1rem; }
       header nav .navMenu .search {
         width: 22rem;
         margin: auto;
         font-family: "Roboto", serif; }
-        header nav .navMenu .search form label {
-          display: none; }
         header nav .navMenu .search form input {
           height: 2.5rem;
           width: 18rem;
@@ -89,6 +91,7 @@ header {
       header nav .navMenu div {
         margin: auto; }
         header nav .navMenu div ul {
+          margin-top: auto;
           padding: 0;
           line-height: 2.7rem;
           text-transform: uppercase; }
@@ -131,15 +134,15 @@ header {
 
 /* MAIN */
 /* INDEX.HTML PAGE */
-.containerHomepage {
+.homepageContainer {
   margin-top: -1.8rem; }
-  .containerHomepage .slider {
+  .homepageContainer .slider {
     display: flex;
     height: 30rem;
     background-image: url(../img/programme/RequinRoll-4.jpeg);
     background-position: center;
     background-size: cover; }
-    .containerHomepage .slider .titreSlider {
+    .homepageContainer .slider .titreSlider {
       width: 22rem;
       margin: auto;
       padding: 1rem 0;
@@ -154,15 +157,15 @@ header {
       opacity: 1;
       transition: all ease-in-out 0.5s;
       -webkit-transition: all ease-in-out 0.5s; }
-      .containerHomepage .slider .titreSlider h1 {
+      .homepageContainer .slider .titreSlider h1 {
         margin-top: 1rem; }
-      .containerHomepage .slider .titreSlider hr {
+      .homepageContainer .slider .titreSlider hr {
         height: 1px;
         max-width: 5rem;
         margin: 1.4rem auto;
         background-color: #bdd1da;
         border: none; }
-      .containerHomepage .slider .titreSlider .button {
+      .homepageContainer .slider .titreSlider .button {
         display: block;
         height: 2.5rem;
         width: 14rem;
@@ -174,46 +177,46 @@ header {
         background-color: #bdd1da;
         border-radius: 3px;
         transition-duration: 0.2s; }
-      .containerHomepage .slider .titreSlider .button:hover {
+      .homepageContainer .slider .titreSlider .button:hover {
         background-color: #58cff6;
         cursor: pointer; }
-  .containerHomepage .slider:hover .titreSlider {
+  .homepageContainer .slider:hover .titreSlider {
     opacity: 0; }
-  .containerHomepage .slider:hover .titreSlider:hover {
+  .homepageContainer .slider:hover .titreSlider:hover {
     opacity: 1; }
-  .containerHomepage .news h1 {
-    text-transform: uppercase; }
-  .containerHomepage .news .displayMovies {
-    display: flex;
-    flex-direction: column; }
-    .containerHomepage .news .displayMovies div {
-      text-align: center; }
-      .containerHomepage .news .displayMovies div img {
-        max-height: 33rem; }
-      .containerHomepage .news .displayMovies div img + span {
-        font-size: 1.8rem;
-        font-weight: 600; }
-      .containerHomepage .news .displayMovies div span {
-        display: block;
-        margin: 1rem 0; }
-    .containerHomepage .news .displayMovies div:first-child + div, .containerHomepage .news .displayMovies div:first-child + div + div {
-      margin-top: 2rem; }
-  .containerHomepage .newsletter {
+  .homepageContainer .news {
+    margin-top: 4rem; }
+    .homepageContainer .news h1 {
+      text-transform: uppercase; }
+    .homepageContainer .news .displayMovies {
+      display: flex;
+      flex-direction: column; }
+      .homepageContainer .news .displayMovies div {
+        text-align: center; }
+        .homepageContainer .news .displayMovies div a img {
+          max-height: 33rem; }
+        .homepageContainer .news .displayMovies div h3 {
+          margin-top: 1rem;
+          font-weight: 600; }
+        .homepageContainer .news .displayMovies div span {
+          display: block;
+          margin: 1rem 0; }
+      .homepageContainer .news .displayMovies div:first-child + div, .homepageContainer .news .displayMovies div:first-child + div + div {
+        margin-top: 2rem; }
+  .homepageContainer .newsletter {
     margin: 3rem auto 0; }
-    .containerHomepage .newsletter div {
+    .homepageContainer .newsletter div {
       margin-bottom: 4rem;
       font-family: "Roboto", serif; }
-      .containerHomepage .newsletter div form {
+      .homepageContainer .newsletter div form {
         text-align: center; }
-        .containerHomepage .newsletter div form label {
-          display: none; }
-        .containerHomepage .newsletter div form input {
+        .homepageContainer .newsletter div form input {
           height: 3.5rem;
           width: 22rem;
           font-size: 1.33rem;
           border-radius: 2px 0 0 2px;
           border: 1px solid #58cff6; }
-        .containerHomepage .newsletter div form button {
+        .homepageContainer .newsletter div form button {
           height: 3.5rem;
           margin-left: -0.42rem;
           font-size: 1.33rem;
@@ -222,13 +225,13 @@ header {
           border-radius: 0 2px 2px 0;
           border: 1px solid #58cff6;
           cursor: pointer; }
-  .containerHomepage section iframe {
+  .homepageContainer section iframe {
     width: 100%; }
 
 /* FOOTER */
 .licence {
   margin-top: -0.5rem;
-  line-height: 3rem;
+  line-height: 2rem;
   text-align: center;
   color: white;
   background-image: url(../img/divers/ciel-bleu-01.jpeg); }
@@ -239,48 +242,142 @@ header {
     .licence div div {
       background-color: rgba(255, 255, 255, 0); }
       .licence div div img {
-        width: 12rem;
-        margin: 2.2rem auto 1rem; }
+        height: 6.5rem;
+        margin: 2.1rem auto 2rem; }
     .licence div div:first-child + div, .licence div div:first-child + div + div {
       margin: auto 0;
       background-color: rgba(255, 255, 255, 0); }
-    .licence div div:first-child + div + div {
-      padding-bottom: 1rem; }
+    .licence div div:first-child + div {
+      white-space: pre-line; }
+      .licence div div:first-child + div p {
+        margin-top: 0; }
+    .licence div div:first-child + div + div p {
+      margin-top: 0; }
+      .licence div div:first-child + div + div p a {
+        text-decoration: underline;
+        color: white; }
+
+/* REGISTRATION.HTML PAGE */
+.bookingContainer form {
+  /* SECTION INFO */ }
+  .bookingContainer form table {
+    width: 90%;
+    margin: 0 auto 2.5rem;
+    border-collapse: collapse; }
+    .bookingContainer form table caption {
+      margin: 2.5rem 0;
+      line-height: 3rem;
+      color: #0573ba;
+      font-size: 3rem; }
+    .bookingContainer form table thead tr:first-child th {
+      padding: 1rem 2.5rem;
+      font-size: 2.2rem;
+      font-weight: normal;
+      text-align: left;
+      color: white;
+      background-color: #58cff6;
+      border: 1px solid #58cff6; }
+    .bookingContainer form table thead tr th:first-child {
+      text-align: left; }
+    .bookingContainer form table thead tr th {
+      padding: 1rem;
+      border: 1px solid #bdd1da; }
+    .bookingContainer form table tbody tr:nth-child(even) {
+      background-color: #f2f2f2; }
+    .bookingContainer form table tbody tr:nth-child(odd) {
+      background-color: #FAFAFA; }
+    .bookingContainer form table tbody tr td:first-child {
+      text-align: left; }
+    .bookingContainer form table tbody tr td {
+      width: 33%;
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid #bdd1da; }
+      .bookingContainer form table tbody tr td a {
+        color: #343434; }
+  .bookingContainer form .info {
+    text-align: center; }
+    .bookingContainer form .info h2 {
+      padding: 1rem 0;
+      line-height: 2.5rem;
+      color: #0573ba; }
+    .bookingContainer form .info fieldset {
+      width: 90%;
+      margin: 2.5rem auto;
+      padding: 2.5rem 0;
+      border: 1px solid #dedede; }
+      .bookingContainer form .info fieldset legend {
+        margin: 0 auto;
+        font-size: 1.5em; }
+      .bookingContainer form .info fieldset ul {
+        padding-left: 0; }
+        .bookingContainer form .info fieldset ul li {
+          display: inline-block; }
+          .bookingContainer form .info fieldset ul li input[type=text] {
+            width: 50%;
+            padding: 0.5rem;
+            background-color: white;
+            border: 0;
+            border-bottom: 1px solid #dedede; }
+      .bookingContainer form .info fieldset select {
+        width: 95%;
+        margin: 2.5%;
+        padding: 1rem;
+        font-family: sans-serif; }
+        .bookingContainer form .info fieldset select option {
+          font-family: sans-serif; }
+    .bookingContainer form .info h2 + fieldset ul li, .bookingContainer form .info h2 + fieldset + fieldset ul li {
+      display: block; }
+    .bookingContainer form .info button {
+      margin-bottom: 3rem;
+      padding: 1rem 2.5rem;
+      color: white;
+      background-color: #bdd1da;
+      border: 0;
+      transition-duration: 0.2s; }
+    .bookingContainer form .info button:hover {
+      background-color: #58cff6;
+      cursor: pointer; }
 
 @media screen and (min-width: 992px) {
   /* HEADER */
-  header nav {
-    line-height: 5rem; }
   header .presentation {
     padding-top: 5rem; }
 
   /* MAIN */
   /* INDEX.HTML PAGE */
-  .containerHomepage .slider {
+  .homepageContainer .slider {
     height: 40rem; }
-    .containerHomepage .slider .titreSlider {
+    .homepageContainer .slider .titreSlider {
       width: 36rem;
       padding: 5rem 0;
       font-size: 100%; }
-  .containerHomepage .news .displayMovies {
+  .homepageContainer .news .displayMovies {
     flex-direction: initial;
     justify-content: space-around; }
-    .containerHomepage .news .displayMovies div:first-child + div, .containerHomepage .news .displayMovies div:first-child + div + div {
+    .homepageContainer .news .displayMovies div:first-child + div, .homepageContainer .news .displayMovies div:first-child + div + div {
       margin-top: initial; }
 
   /* FOOTER */
-  .licence {
-    line-height: initial;
-    text-align: initial; }
-    .licence div {
-      flex-direction: initial;
-      justify-content: space-around; }
-      .licence div div img {
-        height: 6.5rem;
-        width: initial;
-        margin: 2.2rem 0 2rem; }
-      .licence div div:first-child + div + div {
-        padding-bottom: initial; } }
+  .licence div div:first-child + div {
+    line-height: 2.5rem; }
+
+  /* REGISTRATION.HTML PAGE */
+  .bookingContainer form {
+    /* SECTION INFO */ }
+    .bookingContainer form table caption {
+      line-height: 2rem; }
+    .bookingContainer form .info h2 {
+      padding: 2rem 0;
+      line-height: 2rem; }
+    .bookingContainer form .info fieldset ul {
+      padding-left: initial; }
+      .bookingContainer form .info fieldset ul li {
+        display: inline-block; }
+        .bookingContainer form .info fieldset ul li label {
+          margin-left: 2.5rem; }
+    .bookingContainer form .info h2 + fieldset + fieldset ul li {
+      display: inline-block; } }
 @media screen and (min-width: 1280px) {
   /* HEADER */
   header {
@@ -288,10 +385,11 @@ header {
     text-align: initial;
     /* NAV */ }
     header nav {
-      flex-direction: initial;
-      line-height: 2rem; }
+      flex-direction: initial; }
       header nav .navMenu {
         flex-direction: initial; }
+        header nav .navMenu div ul {
+          margin: auto; }
     header .announcement {
       font-size: 1.6rem; }
     header .presentation {
@@ -299,9 +397,15 @@ header {
 
   /* MAIN */
   /* INDEX.HTML PAGE */
-  .containerHomepage .slider {
+  .homepageContainer .slider {
     height: 50rem; }
-  .containerHomepage .news .displayMovies div img {
-    max-height: 50rem; } }
+  .homepageContainer .news .displayMovies div a img {
+    max-height: 50rem; }
+
+  /* REGISTRATION.HTML PAGE */
+  .bookingContainer form {
+    /* SECTION INFO */ }
+    .bookingContainer form .info h2 + fieldset ul li {
+      display: inline-block; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -185,7 +185,7 @@ header {
   .homepageContainer .slider:hover .titreSlider:hover {
     opacity: 1; }
   .homepageContainer .news {
-    margin-top: 4rem; }
+    margin-top: 5rem; }
     .homepageContainer .news h1 {
       text-transform: uppercase; }
     .homepageContainer .news .displayMovies {
@@ -257,6 +257,40 @@ header {
         text-decoration: underline;
         color: white; }
 
+.filAriane {
+  margin: -1.3rem auto 3rem -1.8rem;
+  padding: 0.1rem 0 3.5rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  background-color: #fafafa; }
+  .filAriane ul {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto; }
+    .filAriane ul li {
+      float: left;
+      position: relative;
+      margin-right: 2.4rem;
+      list-style: none; }
+      .filAriane ul li a {
+        text-decoration: none;
+        color: #212529; }
+      .filAriane ul li .home::before {
+        padding-right: 0.5rem;
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.3rem;
+        font-weight: 900;
+        content: "\F3E5"; }
+    .filAriane ul .titreFil300 {
+      display: none; }
+  .filAriane ul li a::after {
+    position: absolute;
+    right: -1.5rem;
+    color: #333;
+    content: "/"; }
+  .filAriane ul li a:hover {
+    color: #58cff6; }
+
 /* REGISTRATION.HTML PAGE */
 .bookingContainer form {
   /* SECTION INFO */ }
@@ -312,7 +346,8 @@ header {
       .bookingContainer form .info fieldset ul {
         padding-left: 0; }
         .bookingContainer form .info fieldset ul li {
-          display: inline-block; }
+          display: inline-block;
+          padding: 0.5rem; }
           .bookingContainer form .info fieldset ul li input[type=text] {
             width: 50%;
             padding: 0.5rem;
@@ -339,6 +374,69 @@ header {
       background-color: #58cff6;
       cursor: pointer; }
 
+/* PAGE CONTACT.PHP */
+.contactContainer {
+  max-width: 115rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: center; }
+  .contactContainer h5 {
+    position: relative;
+    display: table;
+    width: 100%;
+    max-width: 57rem;
+    margin: 1rem auto 3.5rem; }
+    .contactContainer h5 span {
+      position: relative;
+      display: table;
+      margin: 0 auto -1.2rem;
+      padding: 0 1.5rem;
+      z-index: 1;
+      font-family: "Roboto", serif;
+      font-size: 2.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #0573ba;
+      background-color: white; }
+  .contactContainer h5::after {
+    display: block;
+    margin-top: -1rem;
+    content: "";
+    border-top: 1px solid #dddddd; }
+  .contactContainer form input {
+    height: 3rem;
+    width: 30%;
+    margin: 1.5rem 0 1rem;
+    padding-left: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid #d2d2d2; }
+  .contactContainer form input::placeholder {
+    font-style: italic; }
+  .contactContainer form .subject {
+    width: 60.3%;
+    margin-top: 2rem; }
+  .contactContainer form textarea {
+    width: 60.3%;
+    margin: 2rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid #d2d2d2; }
+  .contactContainer form textarea::placeholder {
+    font-style: italic; }
+  .contactContainer form button {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1rem 2.5rem;
+    color: white;
+    background-color: #bdd1da;
+    border: 0;
+    transition-duration: 0.2s; }
+  .contactContainer form button:hover {
+    background-color: #58cff6;
+    cursor: pointer; }
+  .contactContainer form p {
+    margin: 1rem auto 0.5rem;
+    color: red; }
+
 @media screen and (min-width: 992px) {
   /* HEADER */
   header .presentation {
@@ -362,14 +460,22 @@ header {
   .licence div div:first-child + div {
     line-height: 2.5rem; }
 
+  /* PAGE-INTROUVABLE.HTML */
+  .filAriane {
+    margin: -1.8rem auto 3rem;
+    padding: 0.1rem 1.5rem 3.5rem; }
+
   /* REGISTRATION.HTML PAGE */
   .bookingContainer form {
     /* SECTION INFO */ }
     .bookingContainer form table caption {
+      margin-bottom: 3.5rem;
       line-height: 2rem; }
     .bookingContainer form .info h2 {
       padding: 2rem 0;
       line-height: 2rem; }
+    .bookingContainer form .info fieldset ul li input[type=text] {
+      width: 30%; }
     .bookingContainer form .info fieldset ul {
       padding-left: initial; }
       .bookingContainer form .info fieldset ul li {
@@ -377,7 +483,13 @@ header {
         .bookingContainer form .info fieldset ul li label {
           margin-left: 2.5rem; }
     .bookingContainer form .info h2 + fieldset + fieldset ul li {
-      display: inline-block; } }
+      display: inline-block; }
+
+  /* PAGE CONTACT.PHP */
+  .contactContainer {
+    margin-bottom: 9.5rem; }
+    .contactContainer h5 {
+      margin: 1rem auto 4.5rem; } }
 @media screen and (min-width: 1280px) {
   /* HEADER */
   header {
@@ -405,6 +517,8 @@ header {
   /* REGISTRATION.HTML PAGE */
   .bookingContainer form {
     /* SECTION INFO */ }
+    .bookingContainer form .info fieldset ul li input[type=text] {
+      width: 50%; }
     .bookingContainer form .info h2 + fieldset ul li {
       display: inline-block; } }
 

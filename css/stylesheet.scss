@@ -790,7 +790,7 @@ header {
       display: table;
       width: 100%;
       max-width: 57rem;
-      margin: 2.5rem auto 3.5rem;
+      margin: 2.2rem auto 3.5rem;
 
       span {
          position: relative;
@@ -973,13 +973,12 @@ header {
             caption {
                width: 100%;
                max-width: 57rem;
-               margin-bottom: 4.4rem;
+               margin: 2.5rem auto 4.4rem;
                line-height: 2rem;
 
                span {
-                  margin: 0 auto -1.2rem;
+                  margin-bottom: -1.2rem;
                   padding: 0 1.5rem;
-                  z-index: 1;
 
                   background-color: rgb(255, 255, 255);
                }

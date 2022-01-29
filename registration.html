@@ -56,50 +56,80 @@
         </nav>
         <!-- MAIN CONTENT -->
         <main class="bookingContainer">
+            <h2><span>Préinscription aux séances</span></h2>
             <form method="POST">
-                <table>
-                    <caption><span>Préinscription aux séances</span></caption>
-                    <thead id="sessionAugust5">
-                        <tr>
-                            <th colspan="3">Vendredi 5 août 2022</th>
-                        </tr>
-                        <tr>
-                            <th>Film</th>
-                            <th>Heure de la séance</th>
-                            <th>Réserver une place</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="program.html#programMovie1">La Haute Route</a></td>
-                            <td>18h00</td>
-                            <td>
-                                <label for="movie1"></label>
-                                <input type="checkbox" id="movie1" name="movie1">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="program.html#programMovie2">L’escalade libérée</a></td>
-                            <td>19h30</td>
-                            <td>
-                                <label for="movie2"></label>
-                                <input type="checkbox" id="movie2" name="movie2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="program.html#programMovie3">Félins, noir sur blanc</a></td>
-                            <td>21h05</td>
-                            <td>
-                                <label for="movie3"></label>
-                                <input type="checkbox" id="movie3" name="movie3">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="tableScroll">
+                    <table>
+                        <thead id="sessionAugust5">
+                            <tr>
+                                <th colspan="4">Vendredi 5 août 2022</th>
+                            </tr>
+                            <tr>
+                                <th>Film</th>
+                                <th>Heure de la séance</th>
+                                <th>Réserver une place</th>
+                                <th>Nombre de places</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="program.html#programMovie1">La Haute Route</a></td>
+                                <td>18h00</td>
+                                <td>
+                                    <label for="movie1"></label>
+                                    <input type="checkbox" id="movie1" name="movie1">
+                                </td>
+                                <td>
+                                    <label for="numberPlacesMovie1"></label>
+                                    <select name="numberPlacesMovie1" id="numberPlacesMovie1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="program.html#programMovie2">L’escalade libérée</a></td>
+                                <td>19h30</td>
+                                <td>
+                                    <label for="movie2"></label>
+                                    <input type="checkbox" id="movie2" name="movie2">
+                                </td>
+                                <td>
+                                    <label for="numberPlacesMovie2"></label>
+                                    <select name="numberPlacesMovie2" id="numberPlacesMovie2">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="program.html#programMovie3">Félins, noir sur blanc</a></td>
+                                <td>21h05</td>
+                                <td>
+                                    <label for="movie3"></label>
+                                    <input type="checkbox" id="movie3" name="movie3">
+                                </td>
+                                <td>
+                                    <label for="numberPlacesMovie3"></label>
+                                    <select name="numberPlacesMovie3" id="numberPlacesMovie3">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <table>
                     <thead id="sessionAugust6">
                         <tr>
-                            <th colspan="3">Samedi 6 août 2022</th>
+                            <th colspan="4">Samedi 6 août 2022</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -110,6 +140,15 @@
                                 <label for="movie4"></label>
                                 <input type="checkbox" id="movie4" name="movie4">
                             </td>
+                            <td>
+                                <label for="numberPlacesMovie4"></label>
+                                <select name="numberPlacesMovie4" id="numberPlacesMovie4">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><a href="program.html#programMovie5">Enfer & Paradis</a></td>
@@ -117,6 +156,15 @@
                             <td>
                                 <label for="movie5"></label>
                                 <input type="checkbox" id="movie5" name="movie5">
+                            </td>
+                            <td>
+                                <label for="numberPlacesMovie5"></label>
+                                <select name="numberPlacesMovie5" id="numberPlacesMovie5">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
@@ -126,13 +174,22 @@
                                 <label for="movie6"></label>
                                 <input type="checkbox" id="movie6" name="movie6">
                             </td>
+                            <td>
+                                <label for="numberPlacesMovie6"></label>
+                                <select name="numberPlacesMovie6" id="numberPlacesMovie6">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
                 <table>
                     <thead id="sessionAugust7">
                         <tr>
-                            <th colspan="3">Dimanche 7 août 2022</th>
+                            <th colspan="4">Dimanche 7 août 2022</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -143,6 +200,15 @@
                                 <label for="movie7"></label>
                                 <input type="checkbox" id="movie7" name="movie7">
                             </td>
+                            <td>
+                                <label for="numberPlacesMovie7"></label>
+                                <select name="numberPlacesMovie7" id="numberPlacesMovie7">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><a href="program.html#programMovie8">Requin’roll</a></td>
@@ -150,6 +216,15 @@
                             <td>
                                 <label for="movie8"></label>
                                 <input type="checkbox" id="movie8" name="movie8">
+                            </td>
+                            <td>
+                                <label for="numberPlacesMovie8"></label>
+                                <select name="numberPlacesMovie8" id="numberPlacesMovie8">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
@@ -159,13 +234,22 @@
                                 <label for="movie9"></label>
                                 <input type="checkbox" id="movie9" name="movie9">
                             </td>
+                            <td>
+                                <label for="numberPlacesMovie9"></label>
+                                <select name="numberPlacesMovie9" id="numberPlacesMovie9">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
                 <table>
                     <thead id="sessionAugust8">
                         <tr>
-                            <th colspan="3">Lundi 8 août 2022</th>
+                            <th colspan="4">Lundi 8 août 2022</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -176,6 +260,15 @@
                                 <label for="movie10"></label>
                                 <input type="checkbox" id="movie10" name="movie10">
                             </td>
+                            <td>
+                                <label for="numberPlacesMovie10"></label>
+                                <select name="numberPlacesMovie10" id="numberPlacesMovie10">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td><a href="program.html#programMovie11">Quatre mois sur ma Biosphère</a></td>
@@ -183,6 +276,15 @@
                             <td>
                                 <label for="movie11"></label>
                                 <input type="checkbox" id="movie11" name="movie11">
+                            </td>
+                            <td>
+                                <label for="numberPlacesMovie11"></label>
+                                <select name="numberPlacesMovie11" id="numberPlacesMovie11">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
@@ -192,11 +294,20 @@
                                 <label for="movie12"></label>
                                 <input type="checkbox" id="movie12" name="movie12">
                             </td>
+                            <td>
+                                <label for="numberPlacesMovie12"></label>
+                                <select name="numberPlacesMovie12" id="numberPlacesMovie12">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
                 <section class="info">
-                    <h2>Pour valider votre réservation, complétez ce formulaire :</h2>
+                    <h2>Pour valider votre réservation, remplissez ce formulaire :</h2>
                     <fieldset>
                         <legend>Vos coordonnées</legend>
                         <ul>
@@ -246,6 +357,7 @@
                     </fieldset>
                     <fieldset>
                         <legend>Comment avez-vous connu notre festival ?</legend>
+                        <label for="reputation"></label>
                         <select name="reputation" id="reputation">
                             <option value="internet">Par internet</option>
                             <option value="friend">Par le bouche à oreille</option>

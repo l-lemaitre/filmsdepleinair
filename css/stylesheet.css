@@ -43,8 +43,8 @@ header {
   font-family: "LibreBaskerville", serif;
   text-align: center;
   background-image: url(../img/divers/ciel-bleu.jpeg);
+  background-position: bottom;
   background-size: cover;
-  background-position: center;
   /* NAV */ }
   header nav {
     display: flex;
@@ -203,22 +203,29 @@ header {
       margin-top: -1rem;
       content: "";
       border-top: 1px solid #dddddd; }
-    .homepageContainer .news .displayMovies {
+    .homepageContainer .news h4 {
+      margin-bottom: -0.5rem; }
+    .homepageContainer .news h4, .homepageContainer .news p {
+      padding: 0 0.5rem;
+      text-align: center; }
+  .homepageContainer .latestMovies {
+    margin-top: 4rem; }
+    .homepageContainer .latestMovies .displayMovies {
       display: flex;
       flex-direction: column; }
-      .homepageContainer .news .displayMovies div {
+      .homepageContainer .latestMovies .displayMovies div {
         text-align: center; }
-        .homepageContainer .news .displayMovies div a img {
+        .homepageContainer .latestMovies .displayMovies div a img {
           height: 33rem;
           width: 27.5rem;
           object-fit: cover; }
-        .homepageContainer .news .displayMovies div h3 {
+        .homepageContainer .latestMovies .displayMovies div h3 {
           margin-top: 1rem;
           font-weight: 600; }
-        .homepageContainer .news .displayMovies div span {
+        .homepageContainer .latestMovies .displayMovies div span {
           display: block;
           margin: 1rem 0; }
-      .homepageContainer .news .displayMovies div:first-child + div, .homepageContainer .news .displayMovies div:first-child + div + div {
+      .homepageContainer .latestMovies .displayMovies div:first-child + div, .homepageContainer .latestMovies .displayMovies div:first-child + div + div {
         margin-top: 2rem; }
   .homepageContainer .newsletter {
     margin: 3rem auto 0; }
@@ -375,17 +382,23 @@ header {
 
 /* REGISTRATION.HTML PAGE */
 /* MAIN */
+.bookingContainer h2 {
+  margin: 2.5rem 0;
+  line-height: 3rem;
+  color: #0573ba;
+  font-size: 3rem; }
 .bookingContainer form {
   /* SECTION INFO */ }
+  .bookingContainer form .tableScroll {
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto; }
+    .bookingContainer form .tableScroll table {
+      width: 100%; }
   .bookingContainer form table {
     width: 90%;
     margin: 0 auto 2.5rem;
     border-collapse: collapse; }
-    .bookingContainer form table caption {
-      margin-bottom: 2.5rem;
-      line-height: 3rem;
-      color: #0573ba;
-      font-size: 3rem; }
     .bookingContainer form table thead tr:first-child th {
       padding: 1rem 2.5rem;
       font-size: 2.2rem;
@@ -406,7 +419,7 @@ header {
     .bookingContainer form table tbody tr td:first-child {
       text-align: left; }
     .bookingContainer form table tbody tr td {
-      width: 33%;
+      width: 25%;
       padding: 1rem;
       text-align: center;
       border: 1px solid #bdd1da; }
@@ -415,9 +428,10 @@ header {
   .bookingContainer form .info {
     text-align: center; }
     .bookingContainer form .info h2 {
+      margin: initial;
       padding: 1rem 0;
       line-height: 2.5rem;
-      color: #0573ba; }
+      font-size: 2.25rem; }
     .bookingContainer form .info fieldset {
       width: 90%;
       margin: 2.5rem auto;
@@ -532,10 +546,10 @@ header {
       width: 36rem;
       padding: 5rem 0;
       font-size: 100%; }
-  .homepageContainer .news .displayMovies {
+  .homepageContainer .latestMovies .displayMovies {
     flex-direction: initial;
     justify-content: space-around; }
-    .homepageContainer .news .displayMovies div:first-child + div, .homepageContainer .news .displayMovies div:first-child + div + div {
+    .homepageContainer .latestMovies .displayMovies div:first-child + div, .homepageContainer .latestMovies .displayMovies div:first-child + div + div {
       margin-top: initial; }
 
   /* FOOTER */
@@ -579,6 +593,21 @@ header {
 
   /* REGISTRATION.HTML PAGE */
   /* MAIN */
+  .bookingContainer h2 {
+    width: 100%;
+    max-width: 57rem;
+    margin: 5.5rem auto 4.4rem;
+    line-height: 2rem; }
+    .bookingContainer h2 span {
+      margin: 0 auto -1.2rem;
+      padding: 0 1.5rem;
+      z-index: 1;
+      background-color: white; }
+  .bookingContainer h2::after {
+    display: block;
+    margin-top: -1rem;
+    content: "";
+    border-top: 1px solid #dddddd; }
   .bookingContainer form {
     /* SECTION INFO */ }
     .bookingContainer form table caption {
@@ -596,8 +625,11 @@ header {
       content: "";
       border-top: 1px solid #dddddd; }
     .bookingContainer form .info h2 {
-      padding: 2rem 0;
-      line-height: 2rem; }
+      max-width: initial;
+      margin: initial;
+      padding: 2rem 0; }
+    .bookingContainer form .info h2::after {
+      content: normal; }
     .bookingContainer form .info fieldset ul li input[type=text] {
       width: 30%; }
     .bookingContainer form .info fieldset ul {
@@ -636,7 +668,7 @@ header {
   /* MAIN */
   .homepageContainer .slider {
     height: 50rem; }
-  .homepageContainer .news .displayMovies div a img {
+  .homepageContainer .latestMovies .displayMovies div a img {
     height: 50rem;
     width: 37rem; }
 

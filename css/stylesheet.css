@@ -183,31 +183,29 @@ header {
     opacity: 0; }
   .homepageContainer .slider:hover .titreSlider:hover {
     opacity: 1; }
-  .homepageContainer .news {
-    margin-top: 5rem; }
-    .homepageContainer .news h1 {
+  .homepageContainer .slider + h1 {
+    display: table;
+    width: 100%;
+    max-width: 57rem;
+    margin: 5rem auto; }
+    .homepageContainer .slider + h1 span {
+      position: relative;
       display: table;
-      width: 100%;
-      max-width: 57rem;
-      margin: 0 auto 3.5rem; }
-      .homepageContainer .news h1 span {
-        position: relative;
-        display: table;
-        margin: 0 auto -1.2rem;
-        padding: 0 1.5rem;
-        z-index: 1;
-        text-transform: uppercase;
-        background-color: white; }
-    .homepageContainer .news h1::after {
-      display: block;
-      margin-top: -1rem;
-      content: "";
-      border-top: 1px solid #dddddd; }
-    .homepageContainer .news h4 {
-      margin-bottom: -0.5rem; }
-    .homepageContainer .news h4, .homepageContainer .news p {
-      padding: 0 0.5rem;
-      text-align: center; }
+      margin: 0 auto -1.2rem;
+      padding: 0 1.5rem;
+      z-index: 1;
+      text-transform: uppercase;
+      background-color: white; }
+  .homepageContainer .slider + h1::after {
+    display: block;
+    margin-top: -1rem;
+    content: "";
+    border-top: 1px solid #dddddd; }
+  .homepageContainer .news h4 {
+    margin-bottom: -0.5rem; }
+  .homepageContainer .news h4, .homepageContainer .news p {
+    padding: 0 0.5rem;
+    text-align: center; }
   .homepageContainer .latestMovies {
     margin-top: 4rem; }
     .homepageContainer .latestMovies .displayMovies {

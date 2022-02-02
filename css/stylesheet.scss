@@ -306,37 +306,35 @@ header {
       }
    }
 
-   .news {
-      margin-top: 5rem;
+   .slider + h1 {
+      display: table;
+      width: 100%;
+      max-width: 57rem;
+      margin: 5rem auto;
 
-      h1 {
+      span {
+         position: relative;
+
          display: table;
-         width: 100%;
-         max-width: 57rem;
-         margin: 0 auto 3.5rem;
+         margin: 0 auto -1.2rem;
+         padding: 0 1.5rem;
+         z-index: 1;
 
-         span {
-            position: relative;
+         text-transform: uppercase;
 
-            display: table;
-            margin: 0 auto -1.2rem;
-            padding: 0 1.5rem;
-            z-index: 1;
-
-            text-transform: uppercase;
-
-            background-color: rgb(255, 255, 255);
-         }
+         background-color: rgb(255, 255, 255);
       }
+   }
 
-      h1::after {
-         display: block;
-         margin-top: -1rem;
+   .slider + h1::after {
+      display: block;
+      margin-top: -1rem;
 
-         content: "";
-         border-top: 1px solid rgb(221, 221, 221);
-      }
+      content: "";
+      border-top: 1px solid rgb(221, 221, 221);
+   }
 
+   .news {
       h4 {
          margin-bottom: -0.5rem;
       }

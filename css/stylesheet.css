@@ -417,7 +417,7 @@ header {
     .bookingContainer form table tbody tr td:first-child {
       text-align: left; }
     .bookingContainer form table tbody tr td {
-      width: 25%;
+      width: 33%;
       padding: 1rem;
       text-align: center;
       border: 1px solid #bdd1da; }

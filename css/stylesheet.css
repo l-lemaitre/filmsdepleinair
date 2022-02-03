@@ -423,6 +423,8 @@ header {
       border: 1px solid #bdd1da; }
       .bookingContainer form table tbody tr td a {
         color: #343434; }
+      .bookingContainer form table tbody tr td select {
+        height: 3rem; }
   .bookingContainer form .info {
     text-align: center; }
     .bookingContainer form .info h2 {
@@ -565,7 +567,7 @@ header {
   .programContainer h2 {
     width: 100%;
     max-width: 57rem;
-    margin: 5.5rem auto 4.4rem;
+    margin: 5rem auto;
     line-height: 2rem; }
     .programContainer h2 span {
       margin: 0 auto -1.2rem;
@@ -594,7 +596,7 @@ header {
   .bookingContainer h2 {
     width: 100%;
     max-width: 57rem;
-    margin: 5.5rem auto 4.4rem;
+    margin: 5rem auto;
     line-height: 2rem; }
     .bookingContainer h2 span {
       margin: 0 auto -1.2rem;
@@ -642,9 +644,7 @@ header {
   /* PAGE CONTACT.PHP */
   /* MAIN */
   .contactContainer {
-    margin-bottom: 9.5rem; }
-    .contactContainer h5 {
-      margin-bottom: 4.5rem; } }
+    margin-bottom: 9.5rem; } }
 @media screen and (min-width: 1280px) {
   /* HEADER */
   header {
